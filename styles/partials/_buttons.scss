@@ -37,12 +37,13 @@ button {
     width: fit-content;
     height: auto;
     background-color: transparent;
-    color: rgba($color: white, $alpha: 0.5);
+    color: rgba($color: black, $alpha: 0.5);
 
     &::after {
       font-family: "Material Symbols Outlined";
       content: "chevron_right";
       font-size: 18px;
+      color: rgba($color: black, $alpha: 0.5);
     }
 
     &:hover,

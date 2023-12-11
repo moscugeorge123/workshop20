@@ -32,12 +32,13 @@ button.link {
   width: fit-content;
   height: auto;
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 button.link::after {
   font-family: "Material Symbols Outlined";
   content: "chevron_right";
   font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
 }
 button.link:hover, button.link.selected {
   color: #d87d4a;
