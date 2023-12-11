@@ -1,0 +1,37 @@
+.jumbotron {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  color: white;
+}
+.jumbotron .product-description {
+  align-self: center;
+  z-index: 1;
+}
+.jumbotron .product-description .promo {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 10px;
+}
+.jumbotron .product-description h1 {
+  font-size: 56px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin: 10px 0;
+}
+.jumbotron .product-description .description {
+  margin-right: 45px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.75);
+}
+.jumbotron .main-image {
+  height: 600px;
+  overflow: hidden;
+}
+.jumbotron .main-image img {
+  width: 100%;
+  margin-top: -115px;
+}/*# sourceMappingURL=jumbotron.css.map */

@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+button {
+  width: 160px;
+  height: 48px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+button:hover {
+  cursor: pointer;
+}
+button.primary {
+  background-color: #d87d4a;
+  color: white;
+}
+button.primary:hover, button.primary.selected {
+  background-color: #fbaf85;
+}
+button.secondary {
+  background-color: transparent;
+  color: black;
+}
+button.secondary:hover, button.secondary.selected {
+  background-color: black;
+  color: white;
+}
+button.link {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+}
+button.link::after {
+  font-family: "Material Symbols Outlined";
+  content: "chevron_right";
+  font-size: 18px;
+}
+button.link:hover, button.link.selected {
+  color: #d87d4a;
+}
+
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+.mso {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto 1110px auto;
+}
+
+.container-fluid {
+  display: grid;
+  grid-template-columns: auto 1110px auto;
+  grid-column: 1/span 3;
+  background-color: #0e0e0e;
+}
+
+.container {
+  width: 100%;
+  grid-column-start: 2;
+}/*# sourceMappingURL=common.css.map */

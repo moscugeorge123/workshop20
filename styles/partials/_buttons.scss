@@ -1,0 +1,53 @@
+button {
+  width: 160px;
+  height: 48px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.primary {
+    background-color: #d87d4a;
+    color: white;
+
+    &:hover,
+    &.selected {
+      background-color: #fbaf85;
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+    color: black;
+
+    &:hover,
+    &.selected {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &.link {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: auto;
+    background-color: transparent;
+    color: rgba($color: white, $alpha: 0.5);
+
+    &::after {
+      font-family: "Material Symbols Outlined";
+      content: "chevron_right";
+      font-size: 18px;
+    }
+
+    &:hover,
+    &.selected {
+      color: #d87d4a;
+    }
+  }
+}

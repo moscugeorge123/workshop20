@@ -1,0 +1,4 @@
+@mixin structure() {
+  display: grid;
+  grid-template-columns: auto 1110px auto;
+}
