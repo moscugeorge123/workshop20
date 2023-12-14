@@ -10,6 +10,10 @@ header {
     align-self: center;
   }
 
+  .menu {
+    display: none;
+  }
+
   .links {
     justify-self: center;
 
@@ -27,5 +31,25 @@ header {
 
   span.mso {
     color: white;
+  }
+}
+
+@media screen and (width < 376px) {
+  header {
+    grid-template-columns: 30px auto 30px;
+    justify-content: stretch;
+
+    .menu {
+      display: block;
+      grid-column: 1 / span 1;
+    }
+
+    .links {
+      display: none;
+    }
+
+    .logo {
+      justify-self: center;
+    }
   }
 }

@@ -1,4 +1,44 @@
 @mixin structure() {
   display: grid;
   grid-template-columns: auto 1110px auto;
+
+  @media screen and (width < 376px) {
+    grid-template-columns: auto 327px auto;
+  }
+}
+
+@mixin product-content($main-color, $title-size, $space: 0) {
+  color: $main-color;
+
+  .product-description {
+    align-self: center;
+    z-index: 1;
+
+    & > *:not(:last-child) {
+      margin-bottom: $space;
+    }
+
+    .promo {
+      text-transform: uppercase;
+      font-size: 14px;
+      color: rgba($color: $main-color, $alpha: 0.5);
+      letter-spacing: 10px;
+    }
+
+    h1 {
+      font-size: $title-size;
+      text-transform: uppercase;
+      letter-spacing: 1.42px;
+      line-height: 1;
+      margin: 10px 0;
+    }
+
+    .description {
+      margin-right: 45px;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 25px;
+      color: rgba($color: $main-color, $alpha: 0.75);
+    }
+  }
 }

@@ -1,4 +1,6 @@
-.products {
+@import "./partials/mixins";
+
+.products-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
@@ -22,6 +24,12 @@
       justify-self: self-end;
     }
 
+    &:hover {
+      img {
+        animation: bounce 1.5s ease-in-out;
+      }
+    }
+
     img {
       height: 180px;
       margin-top: -100px;
@@ -34,5 +42,84 @@
       font-size: 18px;
       margin: 8px 0;
     }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (width < 376px) {
+  .products-3 {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 1fr);
+
+    .product {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.product-100 {
+  padding: 160px 0;
+
+  & > *:not(:last-child) {
+    margin-bottom: 160px;
+  }
+
+  .product {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 125px;
+
+    &.reverse {
+      .content {
+        order: -1;
+      }
+    }
+
+    .image-container {
+      display: grid;
+      grid-template-columns: 100%;
+      width: 540px;
+      height: 560px;
+      background-color: #f1f1f1;
+
+      img {
+        width: 350px;
+        justify-self: center;
+        align-self: center;
+      }
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 100%;
+
+      @include product-content(black, 40px, 32px);
+    }
+  }
+}
+
+@keyframes bounce {
+  20% {
+    margin-top: -140px;
+  }
+
+  40% {
+    margin-top: -80px;
+  }
+
+  60% {
+    margin-top: -130px;
+  }
+
+  80% {
+    margin-top: -90px;
+  }
+
+  80% {
+    margin-top: -100px;
   }
 }
