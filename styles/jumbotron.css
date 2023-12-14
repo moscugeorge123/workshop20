@@ -7,6 +7,9 @@
   align-self: center;
   z-index: 1;
 }
+.jumbotron .product-description > *:not(:last-child) {
+  margin-bottom: 20px;
+}
 .jumbotron .product-description .promo {
   text-transform: uppercase;
   font-size: 14px;
@@ -16,7 +19,7 @@
 .jumbotron .product-description h1 {
   font-size: 56px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.42px;
   line-height: 1;
   margin: 10px 0;
 }
@@ -34,4 +37,64 @@
 .jumbotron .main-image img {
   width: 100%;
   margin-top: -115px;
+}
+
+@media screen and (width < 376px) {
+  .jumbotron {
+    height: calc(100vh - 96px);
+    position: relative;
+    grid-template-columns: 100%;
+    align-content: center;
+    color: white;
+  }
+  .jumbotron .product-description {
+    align-self: center;
+    z-index: 1;
+  }
+  .jumbotron .product-description > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .jumbotron .product-description .promo {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 10px;
+  }
+  .jumbotron .product-description h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 1.42px;
+    line-height: 1;
+    margin: 10px 0;
+  }
+  .jumbotron .product-description .description {
+    margin-right: 45px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .jumbotron .product-description {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
+  .jumbotron .product-description .description {
+    margin: 0;
+    text-align: center;
+  }
+  .jumbotron .product-description button.primary {
+    margin-top: 20px;
+  }
+  .jumbotron .main-image {
+    position: absolute;
+    overflow: auto;
+    height: auto;
+    margin-left: calc((-100vw + 327px) / 2);
+    margin-right: calc((-100vw + 327px) / 2);
+  }
+  .jumbotron .main-image img {
+    margin: 0;
+    display: block;
+  }
 }/*# sourceMappingURL=jumbotron.css.map */

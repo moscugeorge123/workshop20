@@ -9,6 +9,9 @@ header {
 header > * {
   align-self: center;
 }
+header .menu {
+  display: none;
+}
 header .links {
   justify-self: center;
 }
@@ -23,4 +26,21 @@ header .links a:last-child {
 }
 header span.mso {
   color: white;
+}
+
+@media screen and (width < 376px) {
+  header {
+    grid-template-columns: 30px auto 30px;
+    justify-content: stretch;
+  }
+  header .menu {
+    display: block;
+    grid-column: 1/span 1;
+  }
+  header .links {
+    display: none;
+  }
+  header .logo {
+    justify-self: center;
+  }
 }/*# sourceMappingURL=header.css.map */

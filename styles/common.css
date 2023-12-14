@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+.primary {
+  color: #d87d4a;
+}
+
+.secondary {
+  color: #101010;
+}
+
 button {
   width: 160px;
   height: 48px;
@@ -72,6 +80,11 @@ body {
   display: grid;
   grid-template-columns: auto 1110px auto;
 }
+@media screen and (width < 376px) {
+  body {
+    grid-template-columns: auto 327px auto;
+  }
+}
 
 .container-fluid {
   display: grid;
@@ -79,8 +92,14 @@ body {
   grid-column: 1/span 3;
   background-color: #0e0e0e;
 }
+@media screen and (width < 376px) {
+  .container-fluid {
+    grid-template-columns: auto 327px auto;
+  }
+}
 
 .container {
   width: 100%;
   grid-column-start: 2;
+  grid-column-end: 3;
 }/*# sourceMappingURL=common.css.map */
